@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO</title>
+    <meta name="description" content="SK Naseeb Kamal — Java Full-Stack Developer. Portfolio showcasing projects and contact details.">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="../css/index.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <nav class="navbar">
+        <div class="logo">
+            <p class="navlogoname">SK NASEEB KAMAL</p>
+        </div>
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+            <span></span>
+        </button>
+        <div class="menu">
+            <ul>
+                <li> <a href="#home"><u>HOME</u></a></li>
+                <li><a href="#about">ABOUT</a></li>
+                <li><a href="#project">PROJECT</a></li>
+                <li><a href="#contact">CONTACT</a></li>
+            </ul>
+        </div>
+        <div class="button">
+            <a class="btn" href="C:\Users\skasi\Desktop\PORTFOLIO1\Sk_Naseeb_Res.-1.pdf" download aria-label="Download resume">
+                Download CV
+                <i class="uil uil-file-alt" aria-hidden="true"></i>
+            </a>
+        </div>
+    </nav>
+    <main id="main">
+        <section id="home">
+            <div class="homecontent">
+                <h2>WELCOME TO MY PORTFOLIO</h2>
+                <h1>I AM SK NASEEB KAMAL</h1>
+                <h3>
+                    I am a
+                    <span class="typedtext" id="pyd">Java Full-Stack Developer</span>
+                    <span class="typed-cursor" aria-hidden="true">|</span>
+                </h3>
+                <p>I am SK Naseebkamal, a passionate web developer who loves building dynamic and responsive
+                    websites. I have strong skills in HTML, CSS, and JavaScript, and I focus on creating clean,
+                    user-friendly designs. My portfolio includes projects that reflect my front-end development
+                    abilities, UI/UX understanding, and problem-solving skills. I am always learning new technologies to
+                    keep my work modern and impactful.
+                </p>
+                <div class="social">
+                    <a class="social-link facebook" href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a class="social-link instagram" href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a class="social-link github" href="https://github.com/" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a class="social-link linkedin" href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <div class="hero-ctas">
+                    <a href="#project" class="btn primary">View Projects</a>
+                    <a href="#contact" class="btn outline">Contact Me</a>
+                </div>
+
+            </div>
+            <div class="homeimg">
+                <img src="./images/Gemini_Generated_Image_m9lsi3m9lsi3m9ls.png" alt="Profile photo">
+            </div>
+            <div class="scrollbtn">
+                <a href="">
+                    <i class=""></i>
+                    <p>scroll down</p>
+                </a>
+            </div>
+        </section>
+        <section id="about">
+            <div class="aboutimg">
+                <img src="./images/Gemini_Generated_Image_m9lsi3m9lsi3m9ls.png" alt="ABOUT IMG">
+            </div>
+            <div class="aboutcontent">
+                <h1>ABOUT ME</h1>
+                <h3>
+                    <span class="role"> web</span>
+                    <span class="role">designer</span>
+                    <span class="role"> FULL-STACK</span>
+                </h3>
+                <p>I am SK Naseebkamal, a passionate web developer who loves building dynamic and responsive
+                    websites. I have strong skills in HTML, CSS, and JavaScript, and I focus on creating clean,
+                    user-friendly designs. My portfolio includes projects that reflect my front-end development
+                    abilities, UI/UX understanding, and problem-solving skills. I am always learning new technologies to
+                    keep my work modern and impactful.
+                </p>
+                <a href=""></a>
+            </div>
+        </section>
+
+        <section id="project">
+            <h3 class="heading">My</h3>
+            <span id="pro">Projects</span>
+            <div class="projectcont">
+                <div class="probox">Project 1</div>
+                <div class="probox">Project 2</div>
+                <div class="probox">Project 3</div>
+            </div>
+        </section>
+
+       
+        <section id="contact">
+            <h2 class="heading">Contact <span id="come">Me</span></h2>
+
+            <form action="https://formspree.io/f/mgvzoqpa" method="POST">
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Full Name" aria-label="Full name" required />
+                    <input type="email" name="email" placeholder="Your Email" aria-label="Email address" required />
+                </div>
+
+                <div class="input-box">
+                    <input type="tel" name="phone" placeholder="Your Number" aria-label="Phone number" required />
+                    <input type="text" name="subject" placeholder="Email Subject" aria-label="Subject" />
+                </div>
+
+                <textarea name="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
+
+                <input type="submit" value="Send Message" class="btn" />
+            </form>
+        </section>
+
+    </main>
+</body>
+
+    <script>
+        (function(){
+            const hb = document.querySelector('.hamburger');
+            const menu = document.querySelector('.menu');
+            if(!hb || !menu) return;
+            hb.addEventListener('click', ()=>{
+                const expanded = hb.getAttribute('aria-expanded') === 'true';
+                hb.setAttribute('aria-expanded', String(!expanded));
+                menu.classList.toggle('open');
+            });
+        })();
+    </script>
+
+</html>
